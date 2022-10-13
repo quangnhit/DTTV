@@ -132,18 +132,20 @@ class CustomNavigationState extends State<CustomNavigation> with BaseMixin {
                 },
               ),
             ),
-            Container(
-              transform: Matrix4.translationValues(0, -5, 5),
-              child: Text(
-                s.toString(),
-                style: textStyle.medium(
-                  size: 13.0,
-                  color: isActive && n == active
-                      ? color.appBaseColor
-                      : color.appBaseColor,
-                ),
-              ),
-            )
+            n == active
+                ? Container(
+                    transform: Matrix4.translationValues(0, -5, 5),
+                    child: Text(
+                      s.toString(),
+                      style: textStyle.medium(
+                        size: 13.0,
+                        color: isActive && n == active
+                            ? color.appBaseColor
+                            : color.appBaseColor,
+                      ),
+                    ),
+                  )
+                : const SizedBox()
           ],
         ),
       ),

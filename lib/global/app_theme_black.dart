@@ -54,4 +54,10 @@ class AppThemeBlack extends AppTheme {
   @override
   Color get randomColor =>
       Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+
+  @override
+  List<Color> get rdGradientColor => [
+        Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0),
+        Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0)
+      ];
 }
